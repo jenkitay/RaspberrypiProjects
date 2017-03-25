@@ -1,0 +1,25 @@
+#!/bin/bash
+
+## To create Linux command from this script:
+## save it as the name of the command, for example: lsvnc
+## chmod +x lsvnc
+## cp lsvnc /usr/bin/
+
+## Lists active VNC Server processes
+#ps -ef | grep vnc
+
+## Formatted list of active VNC processes 
+if pgrep vnc;
+then
+  echo Active VNC processes:
+  ps -o user,pid,ppid,session,stat,pcpu,pmem,command -p $(pgrep vnc);
+else echo No active VNC processes;
+fi
+
+## Brief formatted list of active VNC processes 
+#if pgrep vnc;
+#then 
+#  echo Active VNC processes:
+#  ps -p $(pgrep vnc)
+#else echo No active VNC processes;
+#fi
