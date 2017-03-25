@@ -1,14 +1,22 @@
 #!/bin/bash
 
+## Author: Taylor Jenkins
+## Date: March 25, 2017
+## License: MIT
+## Description: A script to list all active VNC processes, 
+##              formatted to include relevant information.
+
+## Note:
 ## To create Linux command from this script:
 ## save it as the name of the command, for example: lsvnc
 ## chmod +x lsvnc
 ## cp lsvnc /usr/bin/
 
-## Lists active VNC Server processes
+## Improves upon this script, which also lists active VNC Server processes
 #ps -ef | grep vnc
 
-## Formatted list of active VNC processes 
+## Generates a formatted list of active VNC processes 
+## conditional statements handle the error for when there are no VNC processes
 if pgrep vnc;
 then
   echo Active VNC processes:
