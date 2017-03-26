@@ -1,0 +1,13 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# ignore all files with "secret" in the filename
+*secret*
+# ignore all files in the secrets/ and credentials/ directories
+secrets/
+credentials/
